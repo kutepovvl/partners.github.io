@@ -1,0 +1,160 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.partners 
+        &-items 
+            .partners-item
+                &::after 
+                    margin-left: 110px
+        
+@media only screen and (max-width : 1201px)        
+    .about 
+        padding-bottom: 80px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+    .slider 
+        .arrow-wrap-left 
+            left: 15px
+        .arrow-wrap-right 
+            right: 15px
+    
+    .navbar
+        background-color: rgba(0, 0, 0, .8)
+        padding: 10px
+        &-menu 
+            display: none
+            float: left
+            width: 100%
+            text-align: center
+            padding-top: 20px
+            ul 
+                padding: 0
+                li 
+                    display: block
+                    a 
+                        display: block
+                        &::before
+                            height: 1px
+                            width: 100%
+                            opacity: 0
+                        &:hover 
+                            &::before 
+                                opacity: 1
+                        
+                    
+        &-logo 
+            width: 100%
+    .hamburger
+        display: block
+        float: right
+        
+    /*.partners 
+        &-items 
+            padding: 0 20px
+            justify-content: flex-start*/
+
+    .partners 
+        &-items 
+            .partners-item
+                &::after 
+                    margin-left: 83px
+    
+    .packs
+        &-item
+            height: 720px !important        
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.slider 
+        .caption-wrapper
+            h1 
+                font-size: 30px
+                  
+
+@media only screen and (max-width : 769px)
+    .partners 
+        &-items 
+            .partners-item
+                margin-bottom: 90px
+                &::after 
+                    content: '\f103'   
+                    font-family: "fontawesome"
+                    font-size: 40px 
+                    color: $accent
+                    position: absolute
+                    margin-top: 160px
+                    margin-left: -12px
+    .testimonials
+        .carousel-wrap  
+            .arrow-wrap 
+                top: 60%
+            .test 
+                padding: 0 20px
+            .arrow-wrap-left 
+                left: 0
+            .arrow-wrap-right 
+                right: 0
+    
+    .packs
+        &-item
+            height: 535px !important 
+                
+                
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.about 
+        &-list 
+            padding-right: 20px    
+
+@media only screen and (max-width : 481px)
+    .testimonials
+        .carousel-wrap  
+            .arrow-wrap 
+                top: 65%
+    .packs
+        &-item
+            height: 630px !important
+            
+    .contacts
+        p 
+            font-size: 14px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+@media only screen and (min-width : 993px)
+	.navbar
+        &-menu 
+            display: block !important
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

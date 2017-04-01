@@ -1,0 +1,537 @@
+@import "vars"
+
+
+// СЛАЙДЕР
+/*********/
+.slider 
+    .slide-bg
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        height: 100vh
+        min-height: 590px
+        position: relative
+        .overlay 
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(0, 0, 0, .7)
+            .cell-vertical-wrapper
+                display: table
+                width: 100%
+                height: 100%
+                .cell-middle
+                    display: table-cell
+                    vertical-align: middle
+                    .caption-wrapper 
+                        text-align: center
+                        h1 
+                            position: relative
+                            padding-bottom: 25px
+                            &::before 
+                                content: ''
+                                position: absolute
+                                bottom: 0
+                                left: 50%
+                                transform: translateX(-50%)
+                                height: 1px
+                                width: 263px
+                                background-color: #b2b2b2
+                        p 
+                            color: #fff
+                            font-size: 17px
+                            margin: 12px 0 40px 0
+                            
+                            
+       
+    .arrow-wrap 
+        position: absolute
+        z-index: 10 
+        text-align: center
+        top: 50% 
+        transform: translateY(-50%)
+        cursor: pointer
+        transition: all .25s ease-in-out   
+        &:hover 
+            opacity: .7
+        .fa 
+            color: #fff
+            font-size: 36px
+            cursor: pointer 
+
+    .arrow-wrap-left 
+        left: 40px
+
+    .arrow-wrap-right 
+        right: 40px
+            
+    .slick-dots li.slick-active button::before
+        color: $accent
+    .slick-dots
+        bottom: 30px
+        li 
+            button::before 
+                font-size: 42px
+                color: #fff
+                opacity: .75   
+        
+.slick-dotted.slick-slider
+        margin-bottom: 0
+            
+
+
+
+/*ВЕРХНЯЯ ПАНЕЛЬ*/
+/****************/
+.navbar
+    position: absolute
+    z-index: 999
+    width: 100%
+    padding: 25px 0
+    &-logo 
+        float: left
+        .logo
+            font-size: 21px
+            color: $accent
+            font-weight: 700
+            text-transform: uppercase  
+            display: inline-block
+            span 
+                color: #fff
+                font-weight: 300
+    &-menu 
+        float: right
+        ul 
+            margin: 0
+            li 
+                display: inline-block
+                &.active 
+                    a
+                        color: $accent
+                        &::before 
+                            width: 100%
+                a 
+                    margin: 0 10px
+                    padding: 6px 0 10px 0
+                    text-transform: uppercase
+                    transition: all .3s ease
+                    font-size: 13px
+                    position: relative
+                    &::before
+                        content: ''
+                        position: absolute
+                        left: 0
+                        bottom: 0
+                        background-color: $accent
+                        height: 2px
+                        width: 0
+                        transition: all .3s ease
+                    &:hover 
+                        &::before 
+                            width: 100%
+                    
+                    
+                    
+/*ПИРОЖОК*/
+/*********/
+.hamburger
+    padding: 0
+    margin-top: 9px
+    display: none
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before    
+    background-color: #fff
+    height: 2px
+    width: 35px
+    
+    
+/*УНИВЕРСАЛЬНЫЕ СЕКЦИИ*/
+/**********************/
+.universal-sect
+    padding: 90px 0
+    h2 
+        position: relative
+        display: inline-block
+        padding-bottom: 12px
+        margin: 0
+        &::before 
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            height: 3px
+            width: 100%
+            background-color: $accent
+    
+
+/*ГАЛЕРЕЯ О НАС*/
+/***************/
+.fotorama__thumb-border 
+    border-color: #000
+.fotorama__nav
+    text-align: left
+    top: -67px
+
+    
+/* СЕКЦИЯ О НАС*/
+/***************/
+.about 
+    background-color: #eeeeee
+    padding-bottom: 22px
+    &-content 
+        margin-left: 30px
+    &-list
+        margin-top: 43px
+        padding-left: 27px
+        padding-right: 102px
+        li 
+            position: relative
+            &::before 
+                content: '\f055'
+                font-family: "fontawesome"
+                position: absolute
+                left: -28px
+                font-size: 20px
+                color: $accent
+                height: 100%
+                top: 10%
+        p 
+            text-transform: uppercase
+            font-size: 14px
+            font-weight: 400
+            
+    
+            
+/*СЕКЦИЯ ПАРТНЁРСТВО*/
+/********************/
+.partners
+    .head-sect
+        text-align: center
+        margin-bottom: 70px
+        P 
+            font-size: 17px
+            margin-bottom: 0
+            margin-top: 27px
+            line-height: 24px
+    &-items 
+        /*display: flex
+        /*justify-content: space-between
+        /*flex-wrap: wrap*/
+        .partners-item
+            text-align: center
+            position: relative
+            margin-bottom: 40px   
+            &::after 
+                content: '\f101'   
+                font-family: "fontawesome"
+                font-size: 40px 
+                color: $accent
+                position: absolute
+                top: 16%
+                margin-left: 134px
+            &.z
+                &::after 
+                    content: ''
+                    display: none
+            .icon-wrap
+                width: 134px
+                height: 134px
+                border-radius: 50%
+                background-color: $accent
+                text-align: center
+                margin: 0 auto
+                box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3)
+                img 
+                    width: 75px
+                    height: 75px
+                    margin-top: 30px
+            p 
+                font-size: 13px
+                text-transform: uppercase
+                margin-top: 20px
+                margin-bottom: 0
+
+    
+/*СЕКЦИЯ ОТЗЫВЫ*/
+/***************/
+.testimonials
+    text-align: center
+    background-image: url(../img/test.jpg)
+    background-size: cover
+    background-position: center
+    position: relative
+    color: #fff
+    padding-bottom: 140px
+    &::before 
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, .7)
+    .icon-wrap     
+        margin-bottom: 30px
+        img
+            width: 112px
+            height: 112px
+            border-radius: 50%
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3)
+            margin: 0 auto
+    h2 
+        color: #fff
+        margin-bottom: 50px
+    .test 
+        font-size: 18px
+        line-height: 26px
+        padding: 0 120px
+        margin-bottom: 40px
+    .name 
+        font-size: 16px
+        font-weight: 700
+        display: block
+        text-transform: uppercase
+    .city 
+        font-size: 14px
+        color: #b0b0b0
+        font-weight: 400
+    .carousel-wrap    
+        .arrow-wrap 
+            position: absolute
+            top: 55%
+            z-index: 999
+            .fa 
+                font-size: 36px
+                cursor: pointer
+                &:hover 
+                    opacity: .7
+        .arrow-wrap-left 
+            left: -20px
+        .arrow-wrap-right 
+            right: -20px
+        .slick-dots li.slick-active button::before
+            color: $accent
+        .slick-dots
+            bottom: -70px
+            li 
+                button::before 
+                    font-size: 42px
+                    color: #fff
+                    opacity: .75   
+                        
+                        
+                        
+/*СЕКЦИЯ ПРЕИМУЩЕСТВА*/
+/*********************/
+.feautures
+    background-color: #eee
+    text-align: center
+    h2 
+        margin-bottom: 60px
+    &-item 
+        background-color: #fff
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08)
+        padding: 30px 22px 22px 22px
+        margin-bottom: 30px
+        &:hover 
+            box-shadow: 2px 2px 20px 2px rgba(0,0,0,.2);
+        p 
+            color: #5a5a5a
+            font-size: 14px
+            line-height: 22px
+            margin-top: 10px
+            margin-bottom: 0
+        .fa 
+            color: $accent
+            font-size: 36px
+        h3 
+            margin-top: 23px
+            margin-bottom: 0
+            
+            
+/*СЕКЦИЯ НАШИ ПАКЕТЫ*/
+/********************/
+.packs
+    text-align: center
+    &-item
+        bottom: 1px solid #eee
+        box-shadow: 0px 0px 5.88px 0.12px rgba(0, 0, 0, 0.14)
+        padding: 25px 0 15px 0
+        margin-top: 60px
+        height: 595px
+        position: relative
+        ul 
+            margin: 0
+            padding-left: 0
+        li 
+            position: relative
+            border-top: 1px solid #f5f5f5
+            &:last-child 
+                border-bottom: 1px solid #f5f5f5
+            &::before 
+                content: '\f00c'
+                font-family: "fontawesome"
+                position: absolute
+                left: -28px
+                font-size: 16px
+                color: $accent
+                height: 100%
+                top: 24%
+                padding-left: 50px
+            p 
+                font-size: 15px
+                line-height: 22px
+                text-align: left
+                margin-top: 0
+                margin-bottom: 0
+                padding: 15px 20px 12px 50px
+            &.plus 
+                &::before 
+                    content: '\f067'
+        h3 
+            font-weight: 500
+            font-size: 23px
+            color: $accent
+            position: relative
+            display: inline-block
+            margin-top: 0
+            margin-bottom: 27px
+            &::before 
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                background-color: $accent
+                height: 2px 
+                width: 100%
+        .btn 
+            position: absolute
+            bottom: 20px
+            left: 50% 
+            transform: translateX(-50%)
+            &:hover, &:focus
+                color: #fff
+            
+        
+/*ПОДВАЛ*/
+/********/
+.main-foot 
+    background-image: url(../img/foot.jpg)
+    background-size: cover
+    background-position: center 
+    position: relative
+    color: #fff
+    text-align: center
+    padding-bottom: 50px
+    &::before 
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, .7)
+    h2 
+        color: #fff
+        margin-bottom: 60px
+    .btn 
+        display: block
+        margin-bottom: 60px
+        &:hover, &:focus
+            color: #fff
+    input 
+        height: 48px
+    textarea
+        padding-top: 8px
+        height: 150px
+        resize: none
+    input, textarea 
+        width: 100%
+        background-color: transparent
+        border-radius: 0 
+        border: 1px solid #fff
+        padding-left: 45px
+        font-size: 15px
+        font-weight: 300
+        color: #fff
+        transition: all .3s ease
+        margin-bottom: 20px
+    .form-group 
+        transition: all .3s ease
+        .fa 
+            position: absolute
+            top: 0
+            left: 0
+            margin-left: 35px
+            margin-top: 15px
+            color: #fff
+            font-size: 16px
+        &:hover, &:focus 
+            input, textarea
+                border-color: $accent
+            .fa
+                color: $accent
+                
+.contacts
+    text-align: left
+    margin-bottom: 25px
+    .icon-wrap 
+        width: 40px
+        height: 40px
+        background-color: transparent
+        border: 1px solid #fff
+        border-radius: 50%
+        text-align: center
+        position: relative
+        display: inline-block
+        &:hover 
+            border-color: $accent
+            .fa
+                color: $accent
+        .fa 
+            margin-top: 12px
+            font-size: 16px
+            color: #fff
+    p
+        display: inline-block
+        font-size: 16px
+        margin: 0
+        vertical-align: center
+        padding-left: 15px
+        &.phone 
+            font-size: 22px 
+            font-weight: 500
+        
+.copy
+    font-size: 13px
+    color: #cccbcb
+    position: relative
+    text-align: center
+    ul
+        margin: 0
+        padding: 0
+        li 
+            display: inline-block
+            padding: 0 8px
+    a
+        display: block
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        border: 1px solid #fff
+        color: #fff
+        position: relative
+        transition: all .25s ease
+        &:hover 
+            border-color: $accent 
+        .fa 
+            position: absolute
+            left: 50%    
+            margin-top: 11px
+            transform: translateX(-50%)
+            font-size: 16px
+
+
+
+        

@@ -1,0 +1,116 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "interface"
+
+*::-webkit-input-placeholder
+	color: #cccbcb
+	opacity: 1
+
+*:-moz-placeholder
+	color: #cccbcb
+	opacity: 1
+
+*::-moz-placeholder
+	color: #cccbcb
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #cccbcb
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+body
+    font-weight: 300
+    color: #000
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+ul 
+    li 
+        list-style-type: none
+        margin: 0
+        padding: 0
+
+h1, h2, h3, h4, h5, h6
+    font-family: "roboto", sans-serif
+    font-weight: 500
+    text-transform: uppercase
+
+h1 
+    font-size: 40px 
+    color: #fff
+    line-height: 46px
+    margin: 0
+    
+h2 
+    font-size: 30px
+    color: $accent   
+    line-height: 1.3
+    
+h3 
+    font-size: 18px 
+    font-weight: 500
+    
+p 
+    font-weight: 300
+    font-size: 14px
+    
+a 
+    text-decoration: none
+    outline: none 
+    color: #fff
+    &:hover, &:focus 
+        color: $accent
+        outline: none 
+        text-decoration: none
+    
+.btn 
+    display: inline-block
+    text-decoration: none
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 13px
+    padding: 12px 40px
+    background-color: $accent
+    color: #fff
+    border-bottom: 4px solid #24a565 
+    cursor: pointer
+    transition: all .3s ease
+    &:hover, &:focus 
+        background-color: #24a565 
+    
+.fixed
+    position: fixed
+    top: 0
+    left: 0
+    background-color: rgba(0, 0, 0, .8)
+    padding: 10px 0
+    li.active 
+        a
+            &::before 
+                display: none
+    
+
+@import "media" // Всегда в конце
